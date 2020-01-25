@@ -1,7 +1,7 @@
-document.getElementsByTagName('body')[0].onresize = function() {
+document.body.onresize = function() {
 	ajustarTamanhoPalcoJogo()
 }
 
 setInterval(function() {
 	posicaoRandomica()
-}, 1000)
+}, 2000)
