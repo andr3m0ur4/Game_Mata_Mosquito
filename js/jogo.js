@@ -1,8 +1,9 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 15
+var tempo = 20
 var tempo_mosquito
+var qtd_mortes = 0
 
 var nivel = window.location.search
 nivel = nivel.replace('?', '')
@@ -38,7 +39,8 @@ var cronometro = setInterval(function() {
 		clearInterval(criar_mosquito)
 		window.location.href = 'vitoria.html'
 	} else {
-		document.getElementById('cronometro').innerHTML = tempo
+		document.getElementById('cronometro').innerHTML = tempo + ' s'
+		document.getElementById('cronometro').style.color = '#28a745'
 	}
 }, 1000)
 
@@ -75,6 +77,9 @@ function posicaoRandomica() {
 	mosquito.style.position = 'absolute'
 	mosquito.id = 'mosquito'
 	mosquito.onclick = function() {
+		document.getElementById('mosquitos_mortos').innerHTML = qtd_mortes
+		document.getElementById('mosquitos_mortos').style.color = '#dc3545'
+		qtd_mortes = parseInt(document.getElementById('mosquitos_mortos').innerHTML) + 1
 		this.remove()
 	}
 

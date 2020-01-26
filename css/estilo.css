@@ -2,12 +2,23 @@ html {
 	cursor: url(../imagens/mata_mosquito.png) 30 30, auto;
 }
 
-body {
+body, html {
+	height: 100%;
+	width: 100%;
 	background-color: #B7D94E;
 	background-image: url(../imagens/bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+#logo {
+	position: relative;
+	top: 20px;
+	animation-name: main-logo-animation;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-direction: alternate;
 }
 
 .mosquito1 {
@@ -52,4 +63,14 @@ body {
 	float: left;
 	font-size: 20px;
 	font-weight: bold;
+}
+
+@keyframes main-logo-animation {
+	from {
+		top: 20px;
+	}
+
+	to {
+		top: -20px;
+	}
 }
