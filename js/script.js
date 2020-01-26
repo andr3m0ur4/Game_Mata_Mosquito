@@ -6,7 +6,7 @@ function iniciarJogo() {
 		return false
 	}
 
-	alert(nivel)
+	window.location.href = 'app.html?' + nivel
 }
 
 if (document.getElementById('jogo')) {
@@ -18,5 +18,5 @@ if (document.getElementById('jogo')) {
 
 	var criar_mosquito = setInterval(function() {
 		posicaoRandomica()
-	}, 2000)
+	}, tempo_mosquito)
 }

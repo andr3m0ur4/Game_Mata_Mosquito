@@ -2,6 +2,24 @@ var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 15
+var tempo_mosquito
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+switch (nivel) {
+	case 'normal':
+		tempo_mosquito = 1500
+		break
+
+	case 'dificil':
+		tempo_mosquito = 1000
+		break
+
+	case 'chucknorris':
+		tempo_mosquito = 750
+		break
+}
 
 function ajustarTamanhoPalcoJogo () {
 	altura = window.innerHeight
