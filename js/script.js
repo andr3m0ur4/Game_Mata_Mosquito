@@ -1,3 +1,19 @@
+var caminho = location.pathname.split('/')
+	.slice(location.pathname.split('/').length - 1).toString()
+
+window.onload = function() {
+	if (caminho === '' || caminho === 'index.html') {
+		document.querySelector('[iniciar-jogo]').onclick = function() {
+			iniciarJogo()
+		}
+	}
+	if (caminho === 'fim_de_jogo.html' || caminho === 'vitoria.html') {
+		document.querySelector('[reiniciar]').onclick = function() {
+			window.location.href = './'
+		}
+	}
+}
+
 function iniciarJogo() {
 	var nivel = document.getElementById('nivel').value
 
@@ -6,7 +22,7 @@ function iniciarJogo() {
 		return false
 	}
 
-	window.location.href = 'app.html?' + nivel
+	window.location.href = './app.html?' + nivel
 }
 
 if (document.getElementById('jogo')) {
