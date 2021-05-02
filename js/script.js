@@ -18,7 +18,10 @@ function iniciarJogo() {
 	var nivel = document.getElementById('nivel').value
 
 	if (nivel === '') {
-		alert('Selecione um nível para iniciar o jogo')
+		document.getElementById('nivel').classList.add('animate__animated', 'animate__bounce')
+		document.getElementById('nivel').onanimationend = e => {
+			e.target.classList.remove('animate__bounce')
+		}
 		return false
 	}
 

@@ -1,9 +1,10 @@
-# Game_Mata_Mosquito
-Game Mata Mosquito é um jogo desenvolvido utilizando HTML, CSS e JavaScript para criar interação com o usuário.
+# Game_Mata_Mosquito :honeybee:
+
+Kill Mosquito Game was developed using HTML, CSS and JavaScript to create fun for the user.
 
 ## Installation
 
-Para rodar o jogo basta executar o arquivo index.html em um browser, utilizando-se de acesso da internet.
+To execute the game just open the root directory in your Browser, you need to go online.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
